@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 import operator
+import colorama
+from colorama import Fore, Back
+import readline
 
+colorama.init()
 
 operators = {
 	'+': operator.add,
@@ -11,8 +15,11 @@ operators = {
 	'^': operator.pow,
 }
 
+
 def calculate(myarg):
 	stack = list()
+#	if myarg != "zoopa":
+#		stack.append("zeem")
 	for token in myarg.split():
 		try:
 			token = int(token)
@@ -31,7 +38,8 @@ def calculate(myarg):
 def main():
 	while True:
 		result = calculate(input("rpn calc> "))
-		print("Result: ", result)
+
+		print(Fore.GREEN + Back.RED + "Result :" + str(result))
 
 if __name__ == '__main__':
 	main()
