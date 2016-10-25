@@ -1,0 +1,4 @@
+Welcome to the simple test program
+
+According to current estimates, the diag construction will be done:
+Summer 2017.
